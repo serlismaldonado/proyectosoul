@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Proyecto Soul</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="gif">
+            <img src="./img/caminar.gif" alt="">
+        </div>
+        <div id="next" class="next">
+            <img src="https://img.icons8.com/material-two-tone/96/000000/right.png" />
+        </div>
+        <div id="back" class="back">
+            <img src="https://img.icons8.com/material-two-tone/96/000000/left.png" />
+        </div>
+    </div>
+    <script>
+        const audios = ["Escena 1.mp3", "Escena 2.mp3", "Escena 3.mp3",
+            "Escena 4.mp3", "Escena 5.mp3", "Escena 6.mp3",
+            "Escena 7.mp3", "Escena 8.mp3", "Escena 9.mp3",
+            "Escena 10.mp3", "Escena 11.mp3"
+        ]
+
+        const container = document.querySelector(".container ")
+        const next = document.querySelector("#next")
+        const back = document.querySelector("#back")
+
+        let count = 0;
+        let crono = 2000
+        next.addEventListener("click", () => {
+            count++;
+            changeScene()
+        })
+
+        back.addEventListener("click", () => {
+            count--;
+            changeScene()
+        })
+
+        function changeScene() {
+            const audiosNode = document.querySelectorAll("audio")
+            audiosNode.forEach(el => el.remove())
+            if (count <= 12) {
+                const intervalo = setInterval(() => {
+                    console.log(count)
+                    container.setAttribute("class", `container scene${count}`)
+                    changeAudio(audios[count - 1])
+                    clearInterval(intervalo)
+                }, crono);
+            }
+        }
+
+        function changeAudio(audio) {
+            let mp3 = document.createElement("audio")
+            mp3.src = "./audio/" + audio
+            document.body.append(mp3)
+            mp3.setAttribute("class", "audios")
+            mp3.play()
+        }
+    </script>
+</body>
+
+</html>

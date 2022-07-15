@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: fondo 3s infinite alternate;
+}
+
+.gif img {
+    margin: 10%;
+    padding: 0 0 0 90px;
+    width: 70%;
+    justify-content: center;
+}
+
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    top: 50vh;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    animation: mover 1s infinite alternate;
+    position: absolute;
+    opacity: 0.5;
+    border: 2px solid black;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    top: 50vh;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    animation: mover 1s infinite alternate;
+    position: absolute;
+    opacity: 0.5;
+    border: 2px solid black;
+}
+
+.next:hover,
+.back:hover {
+    opacity: 1;
+}
+
+.next img,
+.back img {
+    animation: mover 1s infinite alternate;
+    width: 30px;
+    height: 30px;
+}
+
+.scene0 {
+    animation: scene0 3s forwards;
+}
+
+.scene1 {
+    animation: scene1 3s forwards;
+}
+
+.scene2 {
+    animation: scene2 3s forwards;
+}
+
+.scene3 {
+    animation: scene3 3s forwards;
+}
+
+.scene4 {
+    animation: scene4 3s forwards;
+}
+
+.scene5 {
+    animation: scene5 3s forwards;
+}
+
+.scene6 {
+    animation: scene6 3s forwards;
+}
+
+.scene7 {
+    animation: scene7 3s forwards;
+}
+
+.scene8 {
+    animation: scene8 3s forwards;
+}
+
+.scene9 {
+    animation: scene9 3s forwards;
+}
+
+.scene10 {
+    animation: scene10 3s forwards;
+}
+
+.scene11 {
+    animation: scene11 3s forwards;
+}
+
+.audios {
+    display: none !important;
+}
+
+@keyframes mover {
+    from {
+        width: 50px;
+        height: 50px;
+    }
+    to {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes scene0 {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: white;
+    }
+}
+
+@keyframes scene1 {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: #468faf;
+    }
+}
+
+@keyframes scene2 {
+    from {
+        background-color: #468faf;
+    }
+    to {
+        background-color: #ea9ab2;
+    }
+}
+
+@keyframes scene3 {
+    from {
+        background-color: #ea9ab2;
+    }
+    to {
+        background-color: #ab947e;
+    }
+}
+
+@keyframes scene4 {
+    from {
+        background-color: #ab947e;
+    }
+    to {
+        background-color: #c0c0c0;
+    }
+}
+
+@keyframes scene5 {
+    from {
+        background-color: #c0c0c0;
+    }
+    to {
+        background-color: #c1121f;
+    }
+}
+
+@keyframes scene6 {
+    from {
+        background-color: #c1121f;
+    }
+    to {
+        background-color: #f4845f;
+    }
+}
+
+@keyframes scene7 {
+    from {
+        background-color: #f4845f;
+    }
+    to {
+        background-color: #023e8a;
+    }
+}
+
+@keyframes scene8 {
+    from {
+        background-color: #023e8a;
+    }
+    to {
+        background-color: #800f2f;
+    }
+}
+
+@keyframes scene9 {
+    from {
+        background-color: #800f2f;
+    }
+    to {
+        background-color: #212529;
+    }
+}
+
+@keyframes scene10 {
+    from {
+        background-color: #212529;
+    }
+    to {
+        background-color: #e9ecef;
+    }
+}
+
+@keyframes scene11 {
+    from {
+        background-color: #e9ecef;
+    }
+    to {
+        background-color: #957fef;
+    }
+}
