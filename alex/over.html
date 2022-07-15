@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/over.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="./audio/Inside the Deku Tree.mp3" id="audioNight" autoplay loop></audio>
+    <div class="message">
+    </div>
+    <button id="btn" onclick="byebye()" class="btn">Continuar</button>
+    <script>
+        let div = document.querySelector('.message')
+        let finale = ["Mientras tu estabas en casa lamentandote por tu derrota, el rey demonio amplió su poder hasta que se volvió invencible",
+        "Un dia, estabas arreglando tu casa, escuchaste un estruendo, y a lo lejos viste como se acercaba el rey demonio junto a sus tropas",
+        "Te dejaron en el suelo, y allí viste como todo lo que apreciabas era destruido, y como todo el esfuerzo tuyo y de todos se desvanecía ante una presencia maligna e imponente",
+        "Minutos despues, toda la ciudad quedo en ruinas, y muy pronto pasará en todo el mundo, antes de que el Rey Demonio acabe arrasando toda la ciudad te preguntas",
+        "¿Qué hubiera cambiado si lo hubiera intentado de nuevo...?"]
+        let i = 0;
+        let txt = document.createElement('a')
+        let boton = document.getElementById('btn')
+        div.appendChild(txt)
+        txt.innerText = finale[i]
+        txt.setAttribute('class', 'f')
+        i++
+       var intervalo = setInterval(()=>{
+            txt.innerText = finale[i++]
+            if(i == 5){
+                txt.setAttribute('class', 'finalMsg')
+                btn.setAttribute('class', 'finalBtn')
+            }
+            if(i > 5){
+                clearInterval(intervalo)
+                txt.innerText = finale[4]
+            }
+        },6000)
+        function byebye(){
+            window.location.href = '/title.html'
+        }
+    </script>
+</body>
+</html>

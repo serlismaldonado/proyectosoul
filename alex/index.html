@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="./audio/Kokiri Forest.mp3" id="audioDay" loop></audio>
+    <audio src="./audio/Boss Battle.mp3" id="audioBoss" loop></audio>
+    <audio src="./audio/Hyrule Field .mp3" id="audioNight" loop></audio>
+
+    <div class="main">
+        <div class="mapHidden">
+            <div class="level">
+                <div class="text">
+                    <div class="txt back">
+                        <p><span>¡Saludos</span> <span>Héroe!</span> <span>Tu</span> <span>nombre</span> <span>es</span> <span>Bell,</span> <span>y</span> <span>eres</span> <span>un</span> <span>aventurero</span> <span>que</span> <span>desea</span> <span>ser</span> <span>el</span> <span>heroe</span> <span>mas</span> <span>fuerte</span> <span>del</span> <span>mundo,</span> <span>muchas</span> <span>aventuras</span> <span>te</span> <span>esperan,</span> <span>y</span> <span>el</span> <span>rey</span> <span>demonio</span> <span>aguarda</span> <span>tu </span> <span>llegada,</span> <span>¿tendras</span> <span>la</span> <span>talla</span> <span>para</span> <span>esta</span> <span>batalla?</span></p>
+                    </div>
+                </div>
+            </div>
+                <div class="path"></div>
+                <div class="level level_boss">
+                    <div class="text">
+                        <div class="txt back">
+                            <p><span>Has</span> <span>comenzado</span> <span>tu</span> <span>aventura</span> <span>y</span> <span>mientras</span> <span>vas</span> <span>avanzando</span> <span>entras</span> <span>a</span> <span>una</span> <span>cueva,</span> <span>desafortunadamente,</span> <span>entraste</span> <span>a</span> <span>la</span> <span>guarida</span> <span>del</span> <span>rey</span> <span>demonio, </span> <span>fuiste</span> <span>brutalmente</span> <span>lastimado,</span> <span>y</span> <span>te</span> <span>retiras</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="path"></div>
+                <div id="test"  class="level">
+                    <div class="text">
+                        <div class="txt back">
+                            <p><span>Regresando</span> <span>a</span> <span>casa,</span> <span>pensaste</span> <span>en</span> <span>abandonar</span> <span>el</span> <span>gramio</span> <span>de</span> <span>aventureros,</span> <span>pero</span> <span>un</span> <span>aventurero</span> <span>mayor</span> <span>te</span> <span>encuentra,</span> <span>y</span> <span>cuenta</span> <span>la</span> <span>historia</span> <span>de</span> <span>todos</span> <span>sus</span> <span>fracasos,</span> <span>y</span> <span>como</span> <span>llegó</span> <span>a</span> <span>ser</span> <span>el</span> <span>mas</span> <span>fuerte</span> <span>de</span> <span>todos</span> <span>los</span> <span>aventureros</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="path"></div>
+                <div class="level">
+                    <div class="text text__decision">
+                        <div class="txt back">
+                            <p><span>Después</span> <span>de</span> <span>esta</span> <span>derrota</span> <span>tan</span> <span>dolorosa</span> <span>y</span> <span>la</span> <span>historia</span> <span>de</span> <span>superación</span> <span>del</span> <span>aventurero</span> <span>mas</span> <span>fuerte,</span> <span>¿Crees</span> <span>que</span> <span>puedes</span> <span>seguir</span> <span>y</span> <span>vencer?</span></p>
+                            <div class="decision__buttons">
+                                <button class="btn btn__yes" id="XD" onclick="mostrarDiv()">Lo hare!!</button>
+                                <a href="./over.html"><button class="btn btn__no">No vale la pena...</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="mapHidden2">
+            <div class="level">
+                <div class="text">
+                    <div class="txt back">
+                        <p><span>Animado</span> <span>por</span> <span>las</span> <span>palabras</span> <span>del</span> <span>aventurero,</span> <span>comienzas</span> <span>a</span> <span>entrenar</span> <span>para</span> <span>volverte</span> <span>cada</span> <span>vez</span> <span>mas</span> <span>y</span> <span>mas</span> <span>fuerte,</span> <span>comenzando</span> <span>la</span> <span>segunda</span> <span>parte</span> <span>de</span> <span>tu</span> <span>vida,</span> <span>la</span> <span>parte</span> <span>del</span> <span>exito</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="path"></div>
+            <div class="level">
+                <div class="text">
+                    <div class="txt back">
+                        <p><span>Mientras</span> <span>entrenabas,</span> <span>sentías</span> <span>como</span> <span>se</span> <span>volvía</span> <span>mas</span> <span>fácil</span> <span>derrotar</span> <span>a</span> <span>los</span> <span>monstruos</span> <span>y</span> <span>también</span> <span>te</span> <span>volvias</span> <span>mas</span> <span>fuerte,</span> <span>para</span> <span>prepararte</span> <span>para</span> <span>la</span> <span>revancha</span> <span>contra</span> <span>el</span> <span>rey</span> <span>demonio</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="path"></div>
+            <div class="level">
+                <div class="text">
+                    <div class="txt back">
+                        <p><span>El</span> <span>ansiado</span> <span>día</span> <span>llegó,</span> <span>regresas</span> <span>a</span> <span>la</span> <span>cueva</span> <span>de</span> <span>donde</span> <span>saliste</span> <span>lastimado</span> <span>la</span> <span>primera</span> <span>vez,</span> <span>y</span> <span>mientras</span> <span>mas</span> <span>bajabas,</span> <span>mas</span> <span>fuerte</span> <span>se</span> <span>sentía</span> <span>la</span> <span>presencia</span> <span>del</span> <span>rey</span> <span>demonio,</span> <span>hasta</span> <span>que</span> <span>lo</span> <span>viste,</span> <span>el</span> <span>duelo</span> <span>final</span> <span>habia</span> <span>comenzado</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="path"></div>
+            <div class="level">
+                <div class="text">
+                    <div class="finaltxt txt back">
+                        <p><span>Tuviste</span> <span>una</span> <span>pelea</span> <span>intensa</span> <span>contra</span> <span>el</span> <span>rey</span> <span>demonio,</span> <span>y</span> <span>mientras</span> <span>mas</span> <span>golpes</span> <span>intercambiaban,</span> <span>mas</span> <span>se</span> <span>sentía</span> <span>el</span> <span>agotamiento</span> <span>entre</span> <span>ambos,</span> <span>hasta</span> <span>que</span> <span>ninguno</span> <span>de</span> <span>los</span> <span>dos</span> <span>podía</span> <span>mantenerse</span> <span>de</span> <span>pie</span> <span>sin</span> <span>apoyo,</span> <span>decides</span> <span>acercarte</span> <span>para</span> <span>un</span> <span>golpe</span> <span>final...</span></p>
+                        <button class="btn btn__end" onclick="finalBlow()">Continuar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script>
+
+            let spans = document.querySelectorAll('span')
+            let textos = document.querySelectorAll('.txt')
+
+            for(item of textos){}
+
+            let divs = document.querySelectorAll('.back')
+            let botones = document.querySelectorAll('.a')
+            let jefe = document.querySelectorAll('.level_boss')
+            let divBotones = document.querySelectorAll('.decision__buttons')
+            let nodos = [...botones, ...divBotones]
+
+            const divMap = document.getElementsByClassName("mapHidden")
+            divMap[0].setAttribute("class", "map")
+            const divMap2 = document.getElementsByClassName("mapHidden2")
+            let boton = document.getElementById('XD')
+            function mostrarDiv(){
+                divMap2[0].hidden = "false"
+                divMap2[0].setAttribute('class', 'map__2')
+             }
+             
+
+            console.log(nodos)
+            let el = []
+            let niveles =  document.querySelectorAll('.level')
+         
+           
+            let a = 1
+            let i = 0;
+            for(item of niveles){
+                item.id = `level-0${a++}`
+                item.addEventListener('mouseover', function(event){
+                    let element = document.querySelector(`#${this.id}`)
+                    let spans = element.childNodes[1].childNodes[1].childNodes[1]
+                    spans.setAttribute('class', 'spanAppear')
+                    if(element.id == 'level-04'){
+                        const btn_yes =  document.querySelector('.btn__yes')
+                            btn_yes.setAttribute('class', 'btn btn__yes spanAppear')
+                            const btn__no =  document.querySelector('.btn__no')
+                            btn__no.setAttribute('class', 'btn btn__no spanAppear')
+                    }
+                    if(element.id == 'level-08'){
+                        const btn_end =  document.querySelector('.btn__end')
+                        btn_end.setAttribute('class', 'btn btn__end spanAppear')
+                    }
+                    let items =[]
+                    let length = items.length
+                    event.target.style.background = "green"  
+                    for(nodo of nodos){
+                        nodo.setAttribute('style', "background-color: transparent !important;")
+                    }
+                })
+      
+            }
+
+   
+            let audio = document.getElementById('audioDay')
+            let audioNoche = document.getElementById('audioNight')
+            let audioJefe = document.getElementById('audioBoss')
+
+            let divJefe = document.querySelector('.level_boss')
+            divJefe.addEventListener('mouseover', function(event){
+                audio.volume = 0
+                audioNoche.volume = 0
+                audioJefe .volume = 1
+                audioJefe.play()
+                divJefe.setAttribute('style', 'background-color: red')
+
+            })
+
+            divJefe.addEventListener('mouseleave', function(){
+                audioJefe.volume = 0
+                audio.volume = 1
+                audioNoche.volume = 1
+            })
+            function finalBlow(){
+                    window.location.href = `./victory.html`
+            }
+
+
+            let hora = new Date().getHours()
+            console.log(hora)
+            if(hora >= 7 && hora < 17){
+                // audio.play()
+                document.body.setAttribute('class', 'fondoDia')
+            }else{
+                // audioNoche.play()
+                document.body.setAttribute('class', 'fondoNoche')}
+
+            </script>
+</body>
+</html>

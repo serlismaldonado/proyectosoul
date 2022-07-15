@@ -1,0 +1,63 @@
+.f{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 40px;
+    color: rgb(129, 183, 149);
+    font-weight: 600;
+    animation: textAppear 6s;
+    animation-iteration-count: 4;
+}
+
+body{
+    background-image: url('../Img/fondo bad ending.jpg');
+    background-size: cover;
+    margin: 10%;
+    background-color: rgb(73, 73, 73);
+}
+
+.msg{
+    color: white;
+}
+
+.finalMsg{
+    animation: fadeIn 6s;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 40px;
+    color: rgb(129, 183, 149);
+    font-weight: 600;
+}
+
+.finalBtn{
+    margin-top: 25px;
+    animation: fadeIn 6s;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    color: rgb(43, 43, 43);
+    background-color: rgb(190, 114, 110);
+    border-radius: 1.2em;
+    border: none;
+    
+}
+.btn{
+    opacity: 0;
+}
+
+@keyframes textAppear {
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

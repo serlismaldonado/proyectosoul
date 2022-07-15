@@ -1,0 +1,58 @@
+body{
+    margin: 5%;
+    background-color: rgba(109, 201, 109, 0.87);
+}
+
+
+.main{
+    display: flex;
+}
+
+.msg{
+    margin: auto;
+    width: 80%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    animation: textAppear 6s;
+    animation-iteration-count: 5;
+    color: white;
+}
+.img{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background-image: url('../Img/imagenfinalBueno.jpg');
+    background-size: cover;
+}
+
+.finalMsg{
+    margin: auto;
+    width: 80%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    animation: fadeIn 6s;
+    color: white;
+}
+
+@keyframes textAppear {
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
