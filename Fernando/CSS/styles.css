@@ -1,0 +1,563 @@
+/*Nota: Estos son los estilos para la página secundaria*/
+
+/*Variables de los colores y fuentes a usar en las cartas*/
+:root{
+    --bg_Color: rgb(255, 120, 31);
+    --shadow_Color: rgb(244, 142, 26);
+    --header_Color: rgb(243, 243, 49);
+    --bxshadow_Color: rgb(241, 234, 234);
+    --card_1_Color: rgb(3, 87, 156);
+    --card_2_Color: rgb(158, 2, 2);
+    --card_3_Color: rgb(100, 100, 100);
+    --card_4_Color: rgb(209, 209, 35);
+    --card_5_Color: rgb(228, 126, 9);
+    --card_6_Color: rgb(2, 129, 2);
+    --title_6_Color: rgb(39, 202, 39);
+    --header_Title_Font: 'Cinzel', serif;
+    --text_Font: 'Montserrat', sans-serif;
+    --phrase_Font: 'Allan', cursive;
+}
+
+/* Este contenedor hara que tanto la imagen como el texto se centren*/
+body{
+    margin: 0;
+    background: url(/Elementos/IMG/Fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid var(--header_Color); */
+}
+
+/* Contenedor de la barra superior */
+.container__bar_top{
+    width: 100%; /*El margen de la barra estara cubriendo toda la parte superior de la página*/
+}
+
+/* Alineación del titulo de la barra */
+.txt__align_bar{
+    text-align: center /*Alineación del titulo de la barra*/;
+    font-family: var(--header_Title_Font); /*Fuente de letra para el titulo*/;
+    font-size: 30px;
+}
+
+/*Creacion del texto en 3D*/
+.text__3D_txt{
+  color: white;
+  text-shadow: 1px  1px  1px  var(--shadow_Color),
+               1px  2px  1px  var(--shadow_Color),
+               1px  3px  1px  var(--shadow_Color),
+               1px  4px  1px  var(--shadow_Color),
+               1px  5px  1px  var(--shadow_Color),
+               1px  6px  1px  var(--shadow_Color),
+               1px  7px  1px  var(--shadow_Color),
+               1px  8px  1px  var(--shadow_Color),
+               1px  9px  1px  var(--shadow_Color),
+               1px  10px  1px  var(--shadow_Color),
+               1px  11px  1px  var(--shadow_Color),
+               1px  12px  1px  var(--shadow_Color),
+               1px  13px  1px  var(--shadow_Color),
+               1px  14px  1px  var(--shadow_Color),
+               1px  15px  1px  var(--shadow_Color),
+               1px  16px  1px  var(--shadow_Color)
+}
+
+/* Aplicando efecto hover al texto 3D*/
+.text__3D_txt:hover{
+    color: black;
+    transition: all .4s ease;
+    transform: translate(0px, 15px) perspective(300px);
+    letter-spacing: .12em;
+} 
+
+/* Contenedor en que esta la barra superior */
+.cont__header{
+    background-color: var(--header_Color);
+    position: fixed; /*Esta posicion hace que la barra este fija*/
+    /*Estas posiciones tienen los mismos valores, que rellenaran tanto el lado izquierdo, derecho como arriba*/
+    left: 0; 
+    top: 0;
+    right: 0;
+}
+
+/* Configurar las plantillas de la cartas */
+.card, .card_2, .card_3, .card_4, .card_5, .card_6{
+    position: relative;
+    width: 350px;
+    height: 300px;
+    margin: 15px;
+}
+
+/*Contenedor para configurar la posicion de las cartas*/
+.card_cont {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 170px;
+    margin-bottom: 60px;
+}
+
+/* Configurar la cara frontal de la carta 1 */
+.card__face_front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /*Oculta y mostrar la cara posterior de la carta*/
+    border-radius: 15px;
+    overflow: hidden; /*El overflow se recorta y el contenido se vuelve invisible al girar*/
+    transition: 2.5s;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+    border: 3px solid var(--card_1_Color);
+}
+
+/* Imagen de la carta frontal */
+.card__face_front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Titulo de la carta 1 */
+.card__face_front h3{
+    position: absolute;
+    bottom: 0; /*El titulo de la parte frontal se mantiene en la parte inferior de la carta,
+    de lo contrario estara arriba*/
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    background-color: var(--card_1_Color);
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+/*Aplicando textura 3D a todos los titulos (parte frontal) de las cartas*/
+.title__front_3D{
+    color: black;
+    text-shadow: 1px 1px  1px var(--bxshadow_Color),
+               1px  2px  1px  var(--bxshadow_Color),
+               1px  3px  1px  var(--bxshadow_Color),
+               1px  4px  1px  var(--bxshadow_Color),
+               1px  5px  1px  var(--bxshadow_Color),
+               1px  6px  1px  var(--bxshadow_Color),
+               1px  7px  1px  var(--bxshadow_Color),
+               1px  8px  1px  var(--bxshadow_Color),
+               1px  9px  1px  var(--bxshadow_Color),
+               1px  10px  1px  var(--bxshadow_Color),
+               1px  11px  1px  var(--bxshadow_Color),
+               1px  12px  1px  var(--bxshadow_Color),
+               1px  13px  1px  var(--bxshadow_Color),
+               1px  14px  1px  var(--bxshadow_Color),
+               1px  15px  1px  var(--bxshadow_Color),
+               1px  16px  1px  var(--bxshadow_Color)
+}
+
+/* Parte trasera de la carta */
+.card__face_back{
+    background: var(--card_1_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 10px white;
+}
+
+/* Titulo de la parte trasera */
+.card__face_back h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+/*Aplicando textura 3D a los titulos de la parte trasera de las cartas*/
+.title__back_3D{
+    color: white;
+    letter-spacing: 2px; /*Espaciado horizontal entre los caracteres de texto*/
+    text-shadow: 1px 1px  1px var(--bxshadow_Color),
+               1px  2px  1px  var(--bxshadow_Color),
+               1px  3px  1px  var(--bxshadow_Color),
+               1px  4px  1px  var(--bxshadow_Color),
+               1px  5px  1px  var(--bxshadow_Color),
+               1px  6px  1px  var(--bxshadow_Color),
+               1px  7px  1px  var(--bxshadow_Color),
+               1px  8px  1px  var(--bxshadow_Color),
+               1px  9px  1px  var(--bxshadow_Color),
+               1px  10px  1px  var(--bxshadow_Color),
+               1px  11px  1px  var(--bxshadow_Color),
+               1px  12px  1px  var(--bxshadow_Color),
+               1px  13px  1px  var(--bxshadow_Color),
+               1px  14px  1px  var(--bxshadow_Color),
+               1px  15px  1px  var(--bxshadow_Color),
+               1px  16px  1px  var(--bxshadow_Color)
+}
+
+/*Aplicando hover (al poner el mouse en el texto, este bajara y mientras lo haga se cambiara el color de texto de blanco a negro*).*/
+.title__back_3D:hover{
+    color: black;
+    transition: all .4s ease-in;
+    transform: translate(0px, 15px) perspective(300px);
+    letter-spacing: .12em;
+}
+
+/* Contenido (párrafo) en la parte trasera */
+.card__face_back p{
+    letter-spacing: 1px;
+    font-family: var(--text_Font);
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Animación de giro en la parte frontal y trasera */
+/*Perspective: dara la vista de que las caras giren, rotateY: se rotara el eje Y, para que se gire (verticalmente) cada cara*/
+.card__face_front:hover, .card__face_front-2:hover, .card__face_front-3:hover, .card__face_front-4:hover, .card__face_front-5:hover, .card__face_front-6:hover {
+   transform: perspective(600px) rotateY(180deg); 
+}
+
+.card__face_back:hover, .card__face_back-2:hover, .card__face_back-3:hover, .card__face_back-4:hover, .card__face_back-5:hover, .card__face_back-6:hover{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* Nota: De ahora en adelante, las demás cartas tendrán las mismas propiedades ya explicadas anteriormente, solo cambiaran sus valores*/
+
+/* Card 2 */
+.card__face_front-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: 2.5s;
+    box-shadow: 0 5px 10px var(--bxshadow_Color);
+    border: 3px solid var(--card_2_Color);
+}
+
+.card__face_front-2 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__face_front-2 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background-color: var(--card_2_Color);
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+.card__face_back-2{
+    background: var(--card_2_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+}
+
+.card__face_back-2 h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.card__face_back-2 p{
+    letter-spacing: 1px;
+    font-family: var(--text_Font);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* Card 3 */
+.card__face_front-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: 2.5s;
+    box-shadow: 0 5px 10px var(--bxshadow_Color);
+    border: 3px solid var(--card_3_Color);
+}
+
+.card__face_front-3 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__face_front-3 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background-color: var(--card_3_Color);
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+.card__face_back-3 {
+    background: var(--card_3_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: white;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+}
+
+.card__face_back-3 h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.card__face_back-3 p{
+    letter-spacing: 1px;
+    font-family: var(--text_Font);
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* Card 4 */
+
+.card__face_front-4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: 2.5s;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+    border: 3px solid var(--card_4_Color);
+}
+
+.card__face_front-4 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__face_front-4 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background-color: var(--card_4_Color);
+    color: black;
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+.card__face_back-4 {
+    background: var(--card_4_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: black;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+}
+
+.card__face_back-4 h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.card__face_back-4 p{
+    letter-spacing: 1px;
+    font-family: var(--text_Font);
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*Card 5*/
+
+.card__face_front-5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: 2.5s;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+    border: 3px solid var(--card_5_Color);
+}
+
+.card__face_front-5 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__face_front-5 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background-color: var(--card_5_Color);
+    color: black;
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+.card__face_back-5 {
+    background: var(--card_5_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: black;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+}
+
+.card__face_back-5 h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.card__face_back-5 p{
+    font-family: var(--text_Font);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.card_5{
+    margin-top: 75px;
+}
+
+/*Card 6*/
+
+.card__face_front-6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden; 
+    transition: 2.5s;
+    box-shadow: 0 10px 20px var(--bxshadow_Color);
+    border: 3px solid var(--card_6_Color);
+}
+
+.card__face_front-6 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__face_front-6 h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 35px;
+    background-color: var(--card_6_Color);
+    color: black;
+    text-align: center;
+    font-family: var(--text_Font);
+}
+
+.card__face_back-6 {
+    background: var(--card_6_Color);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: black;
+    border: 3px solid white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 5px 10px var(--bxshadow_Color);
+}
+
+.card__face_back-6 h3{
+    font-family: var(--header_Title_Font);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.card__face_back-6 p{
+    letter-spacing: 1px;
+    font-family: var(--text_Font);
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+
+.card_6{
+    margin-bottom: 80px;
+}
+
+/*Frases*/
+
+.primary_Phrase, .second_Phrase, .creator_cont{
+    font-family: var(--phrase_Font);
+    font-size: 22px;
+    font-weight: bold;
+    border: 5px solid var(--header_Color);
+    border-radius: 1em;
+    padding: 3px 7px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--bg_Color);
+}
+
+.primary_Phrase{
+    margin-top: 10px;
+}
+
+
+
+
+
